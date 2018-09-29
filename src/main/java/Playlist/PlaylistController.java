@@ -1,36 +1,38 @@
 package Playlist;
 
+import TestData.TestData;
 import Track.Track;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+
 @Path("/playlists")
 public class PlaylistController {
+    TestData testData = new TestData();
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getPlayLists(@QueryParam("token") String token) {
-        System.out.println(token);
-        if (token.equals("1234")) {
-            Playlists ps = new Playlists();
-
-            Playlist p = new Playlist();
-            p.setId(1);
-            p.setName("My first playlist");
-            p.setOwner(true);
-
-            Playlist p2 = new Playlist();
-            p2.setId(2);
-            p2.setName("Random playlist");
-            p2.setOwner(true);
-
-            ps.addPlayList(p);
-            ps.addPlayList(p2);
-            ps.setLength(12345);
-            return Response.ok(ps, MediaType.APPLICATION_JSON).build();
+    public Response getPlayLists(@QueryParam("token") String token){
+        if (token.equals(testData.getTOKEN())) {
+            testData.initPlaylists();
+            testData.initTracks();
+            System.out.println(testData.getPlaylists());
+            return Response.ok(testData.getPlaylists(), MediaType.APPLICATION_JSON).build();
         } else {
             return Response.status(403).build();
+        }
+    }
+
+    @Path("/{id}/tracks")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getTracks(@QueryParam("token") String token, @PathParam("id") int id) {
+        if (token.equals(testData.getTOKEN())) {
+            return Response.ok(testData.returnPS(id), MediaType.APPLICATION_JSON).build();
+        } else{
+            return Response.status(404).build();
         }
 
     }

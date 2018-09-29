@@ -6,7 +6,7 @@ public class Playlists {
     private ArrayList<Playlist> playlists;
     private int length;
 
-    Playlists(){
+    public Playlists() {
         playlists = new ArrayList<Playlist>();
     }
 

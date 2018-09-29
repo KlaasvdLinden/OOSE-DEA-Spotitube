@@ -11,6 +11,11 @@ public class Playlist {
     private boolean owner;
     private List<Track> tracks;
 
+    public Playlist(){
+
+        tracks = new ArrayList<Track>();
+    }
+
 
     public int getId() {
         return id;
@@ -38,6 +43,10 @@ public class Playlist {
 
     public void addTrack(Track track){
         tracks.add(track);
+    }
+
+    public List getTracks(){
+        return tracks;
     }
 
 }
