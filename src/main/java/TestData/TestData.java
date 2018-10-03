@@ -68,6 +68,11 @@ public class TestData {
         t.setAlbum("Songs");
         t.setDuration(5);
         t.setPerformer("The Singer");
+        t.setPlaycount(1);
+        t.setPublicationDate(null);
+        t.setDescription(null);
+        t.setOfflineAvailable(false);
+
 
         p.addTrack(t);
 
@@ -76,6 +81,10 @@ public class TestData {
         t2.setAlbum("Deception");
         t2.setDuration(4);
         t2.setPerformer("The Truth");
+        t2.setPlaycount(1);
+        t2.setPublicationDate(null);
+        t2.setDescription(null);
+        t2.setOfflineAvailable(false);
 
         p2.addTrack(t2);
 
