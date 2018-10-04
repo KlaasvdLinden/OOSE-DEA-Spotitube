@@ -1,6 +1,6 @@
 package spotitube.test;
 
-import Playlist.Playlist;
+import Domain.Playlist.Playlist;
 import org.junit.Before;
 import org.junit.Test;
 
