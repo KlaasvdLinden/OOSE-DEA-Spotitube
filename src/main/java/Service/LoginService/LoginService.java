@@ -2,13 +2,16 @@ package Service.LoginService;
 import Domain.Login.RequestLogin;
 import Dao.TestData;
 
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/login")
 public class LoginService {
-    TestData testData = new TestData();
+    @Inject
+    TestData testData;
+    
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
