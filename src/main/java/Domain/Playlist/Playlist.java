@@ -12,14 +12,7 @@ public class Playlist {
     private List<Track> tracks;
 
     public Playlist(){
-
         tracks = new ArrayList<Track>();
-        Track track = new Track();
-        track.setTitle("Test");
-        track.setDuration(1);
-        track.setPerformer("tester");
-        track.setAlbum("Testing");
-        tracks.add(track);
     }
 
 

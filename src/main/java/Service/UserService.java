@@ -1,12 +1,9 @@
-package Manager;
+package Service;
 
 import Dao.User.UserDAO;
-import Dao.util.DatabaseProperties;
 import Domain.Login.RequestLogin;
 
-import javax.inject.Inject;
-
-public class UserManager {
+public class UserService {
 
     UserDAO userDAO = new UserDAO();
 

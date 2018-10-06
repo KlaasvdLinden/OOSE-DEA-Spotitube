@@ -1,10 +1,9 @@
-import Dao.util.DatabaseProperties;
-import Manager.UserManager;
+import Service.UserService;
 
 public class App {
 
     public static void main(String[] args){
-        UserManager um = new UserManager();
+        UserService um = new UserService();
 
         System.out.println(um.getRequestLogin("klaas").getUser());
     }

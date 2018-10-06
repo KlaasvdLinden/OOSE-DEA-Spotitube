@@ -1,11 +1,11 @@
-package Manager;
+package Service;
 
 import Dao.Playlist.PlaylistDAO;
 import Domain.Playlists.Playlists;
 
 
 
-public class PlaylistManager {
+public class PlaylistService {
 
 
     PlaylistDAO playlistDAO = new PlaylistDAO();

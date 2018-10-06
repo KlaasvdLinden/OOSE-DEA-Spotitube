@@ -1,10 +1,10 @@
-package Manager;
+package Service;
 
 import Dao.Track.TrackDAO;
 import Domain.Track.TracksResponse;
 
 
-public class TrackManager {
+public class TrackService {
 
     TrackDAO trackDAO = new TrackDAO();
 
