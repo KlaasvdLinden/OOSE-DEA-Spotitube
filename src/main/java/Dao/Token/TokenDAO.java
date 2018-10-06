@@ -16,7 +16,7 @@ public class TokenDAO extends DAO {
 
     private Logger logger = Logger.getLogger(getClass().getName());
 
-    public ResponseLogin generateOrUpdateToken(String user) {
+    public ResponseLogin generateOrGetToken(String user) {
         ResponseLogin responseLogin;
         responseLogin = getToken(user);
         if (responseLogin == null) {

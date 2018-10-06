@@ -1,7 +1,6 @@
 package Service.LoginService;
 import Dao.Token.TokenDAO;
 import Domain.Login.RequestLogin;
-import Dao.TestData;
 import Domain.Login.ResponseLogin;
 import Manager.UserManager;
 
@@ -23,7 +22,7 @@ public class LoginService {
     public Response login(RequestLogin requestLogin) {
         RequestLogin user = userManager.getRequestLogin(requestLogin.getUser());
         if (requestLogin.getUser().equals(user.getUser()) && requestLogin.getPassword().equals(user.getPassword())) {
-            ResponseLogin rl = td.generateOrUpdateToken(user.getUser());
+            ResponseLogin rl = td.generateOrGetToken(user.getUser());
             return Response.ok(rl, MediaType.APPLICATION_JSON).build();
         } else {
             return Response.status(401).build();
