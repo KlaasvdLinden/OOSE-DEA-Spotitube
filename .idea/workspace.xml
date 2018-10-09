@@ -6,11 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c068539-91c0-45d8-a977-538571a02383" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/PlaylistController/PlaylistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/PlaylistController/PlaylistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Playlist/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Playlist/PlaylistDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/PlaylistService.java" afterDir="false" />
-    </list>
+    <list default="true" id="2c068539-91c0-45d8-a977-538571a02383" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,7 +58,7 @@
     <session id="-560421052">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
@@ -360,39 +356,6 @@
               <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-              <item name="Playlist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -576,7 +539,7 @@
       <workItem from="1538741495319" duration="8351000" />
       <workItem from="1538810893562" duration="3014000" />
       <workItem from="1539065911504" duration="6981000" />
-      <workItem from="1539086901926" duration="806000" />
+      <workItem from="1539086901926" duration="912000" />
     </task>
     <servers />
   </component>
@@ -589,13 +552,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65029000" />
+    <option name="totallyTimeSpent" value="65135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3067114" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3067114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -605,7 +567,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
