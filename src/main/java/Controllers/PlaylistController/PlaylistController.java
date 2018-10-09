@@ -55,4 +55,17 @@ public class PlaylistController {
             return Response.status(403).build();
         }
     }
+
+    @DELETE
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("{id}")
+    public Response deletePlaylist(@QueryParam("token") String token, @PathParam("id") int id){
+        if(userService.rightToken(token)){
+            playlistService.deletePlaylist(id);
+            return Response.ok(playlistService.getPlaylist(token), MediaType.APPLICATION_JSON).build();
+        } else{
+            return Response.status(403).build();
+        }
+
+    }
 }

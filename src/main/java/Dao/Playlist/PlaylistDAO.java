@@ -68,6 +68,19 @@ public class PlaylistDAO extends DAO {
 
     }
 
+    public void deletePlaylist(int id) {
+        try{
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement("delete from playlists where id = ?");
+            statement.setInt(1, id);
+            statement.executeUpdate();
+            connection.close();
+        } catch(SQLException e){
+            logger.warning("Failed to delete the playlist");
+            e.printStackTrace();
+        }
+    }
+
     private Playlist buildPlaylist(ResultSet resultSet) throws SQLException {
 
         int id = resultSet.getInt("id");
@@ -80,6 +93,7 @@ public class PlaylistDAO extends DAO {
         return playlist;
 
     }
+
 
 
 }

@@ -24,4 +24,8 @@ public class PlaylistService {
     public void addPlaylist(String name) {
         playlistDAO.addPlaylist(name, userService.getUserName());
     }
+
+    public void deletePlaylist(int id) {
+        playlistDAO.deletePlaylist(id);
+    }
 }
