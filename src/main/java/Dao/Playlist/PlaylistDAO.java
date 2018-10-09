@@ -1,11 +1,8 @@
 package Dao.Playlist;
 
 import Dao.DAO;
-import Dao.Track.TrackDAO;
 import Domain.Playlist.Playlist;
 import Domain.Playlists.Playlists;
-
-import javax.inject.Inject;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,8 +11,6 @@ import java.util.logging.Logger;
 
 public class PlaylistDAO extends DAO {
 
-    @Inject
-    TrackDAO trackDAO;
 
     private Logger logger = Logger.getLogger(getClass().getName());
 
@@ -44,6 +39,35 @@ public class PlaylistDAO extends DAO {
 
     }
 
+    public void editPlaylist(int id, String name) {
+        try {
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement("update playlists set name = ? where id = ?");
+            statement.setString(1, name);
+            statement.setInt(2, id);
+            statement.executeUpdate();
+            connection.close();
+        } catch (SQLException e) {
+            logger.warning("Failed to edit the playlist name");
+            e.printStackTrace();
+        }
+    }
+
+    public void addPlaylist(String name, String owner) {
+        try{
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement("insert into playlists values(null, ?, ?, 1)");
+            statement.setString(1, owner);
+            statement.setString(2, name);
+            statement.executeUpdate();
+            connection.close();
+        } catch(SQLException e){
+            logger.warning("Failed to insert the playlist");
+            e.printStackTrace();
+        }
+
+    }
+
     private Playlist buildPlaylist(ResultSet resultSet) throws SQLException {
 
         int id = resultSet.getInt("id");
@@ -56,4 +80,6 @@ public class PlaylistDAO extends DAO {
         return playlist;
 
     }
+
+
 }

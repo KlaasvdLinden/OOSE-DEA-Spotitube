@@ -12,11 +12,12 @@ public class UserDAO extends DAO {
 
     private Logger logger = Logger.getLogger(getClass().getName());
 
-    public RequestLogin getUser(String user){
+    public RequestLogin getUser(String user, String password){
         try {
             Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("SELECT * from users where user = ?");
+            PreparedStatement statement = connection.prepareStatement("SELECT * from users where user = ? and password = ?");
             statement.setString(1, user);
+            statement.setString(2, password);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 return buildRequestLogin(resultSet);
