@@ -2,6 +2,7 @@ package Dao.Track;
 
 import Dao.DAO;
 import Domain.Track.Track;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,17 +12,15 @@ import java.util.logging.Logger;
 
 public class TrackDAO extends DAO {
 
-
     private Logger logger = Logger.getLogger(getClass().getName());
 
-    public ArrayList<Track> findAll(int id) {
-        ArrayList<Track> tracks = new ArrayList<Track>();
+    public ArrayList<Track> getAll(int playlistID) {
+        ArrayList<Track> tracks = new ArrayList<>();
         try {
             Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("select * from spotitube.tracks inner join " +
-                    "spotitube.playlists on tracks.playlistID = playlists.id\n" +
-                    "where tracks.playlistID = ?");
-            statement.setInt(1, id);
+            PreparedStatement statement = connection.prepareStatement("select * from spotitube.tracks where id not in (\n" +
+                    "select trackID from spotitube.playlisttracks where playlistID = ? )");
+            statement.setInt(1, playlistID);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 tracks.add(buildTrack(resultSet));
@@ -47,7 +46,6 @@ public class TrackDAO extends DAO {
         int playcount = resultSet.getInt("playcount");
         String publicationDate = resultSet.getString("publicationDate");
         String description = resultSet.getString("description");
-        boolean offlineAvailable = resultSet.getBoolean("offlineAvailable");
 
         Track track = new Track();
         track.setId(id);
@@ -58,10 +56,8 @@ public class TrackDAO extends DAO {
         track.setPlaycount(playcount);
         track.setPublicationDate(publicationDate);
         track.setDescription(description);
-        track.setOfflineAvailable(offlineAvailable);
+
 
         return track;
     }
 }
-
-

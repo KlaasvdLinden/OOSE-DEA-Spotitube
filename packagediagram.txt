@@ -1,0 +1,11 @@
+Package diagram
+Maak de package met daarin de classes
+
+Beargumentatie:
+Beslissing -> bv: klassen indelen in packages
+Keuze -> bv:  Groeperen per laag
+Alternatieven -> bv: Groeperen per domein element
+	      -> bv: Groeperen per kleur
+Onderbouwing -> Waarom je er  voor hebt gekozen in development termen
+		Voor- en nadelen tov van alternatieven met een reden waarom je tot de keuze bent gekomen
+

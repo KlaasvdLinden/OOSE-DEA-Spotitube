@@ -1,0 +1,20 @@
+!!Zet er duidelijk neer wat je nodig hebt!!
+
+Heb je het op windows gemaakt -> windows server
+Heb je bijv een browser nodig - > zet neer welke browser
+
+Wij gebruiken oa JEE server -> TomEE Plus server
+	Binnen jee server nodes neerzetten die je nodig hebt -> War bestand
+
+Database moet binnen het diagram
+Wij praten via rest met de database/browser
+
+SQLdriver neer zetten
+
+Zet het poortnummer neer dat je gebruikt
+
+Doe het zo gedetaileerd en compleet mogelijk, dus ook de java versie specifiek neerzetten!
+Keuzes verantwoorden net als bij package diagram
+
+Ofterwijl wat heeft de klant nodig om de applicatie te kunnen runnen. Fysieke hardware die moet worden
+aangeschaft en versie's van software. Dingen die jij meelevert zoals maven project hoeveen niet
