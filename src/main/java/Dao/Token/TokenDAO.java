@@ -15,12 +15,18 @@ import java.util.logging.Logger;
 public class TokenDAO extends DAO {
 
     private Logger logger = Logger.getLogger(getClass().getName());
+    private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    private static final String INSERT_TOKEN_QUERY = "INSERT INTO token (user, token) VALUES (?, ?)";
+    private static final String UPDATE_TOKEN_QUERY = "UPDATE token SET token = ? WHERE user = ?";
+    private final int TOKEN_LENGTH = 24;
 
-    public ResponseLogin generateOrGetToken(String user) {
+    public ResponseLogin generateOrUpdateToken(String user) {
         ResponseLogin responseLogin;
         responseLogin = getToken(user);
         if (responseLogin == null) {
-            responseLogin = generateAndSaveToken(user);
+            responseLogin = generateAndSaveToken(user, INSERT_TOKEN_QUERY);
+        } else{
+            responseLogin = generateAndSaveToken(user, UPDATE_TOKEN_QUERY);
         }
 
         return responseLogin;
@@ -28,19 +34,22 @@ public class TokenDAO extends DAO {
 
 
     private ResponseLogin getToken(String user) {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
         try {
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("SELECT * from token where user = ?");
+            connection = getConnection();
+            statement = connection.prepareStatement("SELECT * from token where user = ?");
             statement.setString(1, user);
-            ResultSet resultSet = statement.executeQuery();
+            resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 return buildResponseLogin(resultSet);
             }
-            statement.close();
-            connection.close();
             return null;
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error communicating with database " + e);
+        } finally {
+            this.closeConnection(connection, statement, resultSet);
         }
         return null;
     }
@@ -54,26 +63,44 @@ public class TokenDAO extends DAO {
         return rl;
     }
 
-    private void saveToken(ResponseLogin responseLogin) {
+    private void saveToken(ResponseLogin responseLogin, String query) {
+        Connection connection = null;
+        PreparedStatement statement = null;
         try {
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO token (user, token) VALUES (?, ?)");
-            statement.setString(1, responseLogin.getUser());
-            statement.setString(2, responseLogin.getToken());
+            connection = getConnection();
+            statement = connection.prepareStatement(query);
+            if(query.equals(INSERT_TOKEN_QUERY)){
+                statement.setString(1, responseLogin.getUser());
+                statement.setString(2, responseLogin.getToken());
+            } else{
+                statement.setString(1, responseLogin.getToken());
+                statement.setString(2, responseLogin.getUser());
+            }
+
             statement.executeUpdate();
-            connection.close();
         } catch (SQLException e) {
             logger.warning("Failed to save authenticationToken to database");
             e.printStackTrace();
+        } finally {
+            this.closeConnection(connection, statement, null);
         }
     }
 
-    private ResponseLogin generateAndSaveToken(String user) {
+    private ResponseLogin generateAndSaveToken(String user, String query) {
         ResponseLogin responseLogin = new ResponseLogin();
-        responseLogin.setToken("123-123");
+        responseLogin.setToken(generateToken(TOKEN_LENGTH));
         responseLogin.setUser(user);
-        saveToken(responseLogin);
+        saveToken(responseLogin, query);
 
         return responseLogin;
+    }
+
+    private String generateToken(int count){
+        StringBuilder builder = new StringBuilder();
+        while (count-- != 0) {
+            int character = (int)(Math.random()*ALPHA_NUMERIC_STRING.length());
+            builder.append(ALPHA_NUMERIC_STRING.charAt(character));
+        }
+        return builder.toString();
     }
 }

@@ -25,7 +25,7 @@ public class UserService {
         RequestLogin requestLogin = new UserDAO().getUser(user, password);
 
         if(requestLogin != null){
-            ResponseLogin responseLogin = new TokenDAO().generateOrGetToken(requestLogin.getUser());
+            ResponseLogin responseLogin = new TokenDAO().generateOrUpdateToken(requestLogin.getUser());
             userToken = responseLogin.getToken();
             userName =  responseLogin.getUser();
             return responseLogin;

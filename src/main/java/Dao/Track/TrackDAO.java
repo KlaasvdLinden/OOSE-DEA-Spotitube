@@ -15,25 +15,27 @@ public class TrackDAO extends DAO {
     private Logger logger = Logger.getLogger(getClass().getName());
 
     public ArrayList<Track> getAll(int playlistID) {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
         ArrayList<Track> tracks = new ArrayList<>();
         try {
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("select * from spotitube.tracks where id not in (\n" +
+            connection = getConnection();
+            statement = connection.prepareStatement("select * from spotitube.tracks where id not in (\n" +
                     "select trackID from spotitube.playlisttracks where playlistID = ? )");
             statement.setInt(1, playlistID);
-            ResultSet resultSet = statement.executeQuery();
+            resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 tracks.add(buildTrack(resultSet));
             }
-            connection.close();
             return tracks;
         } catch (SQLException e) {
             logger.warning("Failed to get all tracks from database");
             e.printStackTrace();
             return null;
-
+        } finally {
+            this.closeConnection(connection, statement, resultSet);
         }
-
     }
 
     private Track buildTrack(ResultSet resultSet) throws SQLException {

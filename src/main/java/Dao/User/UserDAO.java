@@ -13,20 +13,23 @@ public class UserDAO extends DAO {
     private Logger logger = Logger.getLogger(getClass().getName());
 
     public RequestLogin getUser(String user, String password){
+
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null ;
         try {
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("SELECT * from users where user = ? and password = ?");
+            connection = getConnection();
+            statement = connection.prepareStatement("SELECT * from users where user = ? and password = ?");
             statement.setString(1, user);
             statement.setString(2, password);
-            ResultSet resultSet = statement.executeQuery();
+            resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 return buildRequestLogin(resultSet);
             }
-            statement.close();
-            connection.close();
-            return null;
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error communicating with database " + e);
+        } finally {
+           this.closeConnection(connection, statement, resultSet);
         }
         return null;
     }

@@ -2,6 +2,7 @@ package Dao.PlaylistTrack;
 
 import Dao.DAO;
 import Domain.Track.Track;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,54 +16,64 @@ public class PlaylistTrackDAO extends DAO {
     private Logger logger = Logger.getLogger(getClass().getName());
 
     public ArrayList<Track> findAll(int id) {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        ;
         ArrayList<Track> tracks = new ArrayList<Track>();
         try {
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("select * from spotitube.tracks inner join " +
+            connection = getConnection();
+            statement = connection.prepareStatement("select * from spotitube.tracks inner join " +
                     "spotitube.playlisttracks on tracks.id = playlisttracks.trackID\n" +
                     "where playlistID = ?");
             statement.setInt(1, id);
-            ResultSet resultSet = statement.executeQuery();
+            resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 tracks.add(buildTrack(resultSet));
             }
-            connection.close();
             return tracks;
         } catch (SQLException e) {
             logger.warning("Failed to get all tracks from database");
             e.printStackTrace();
             return null;
-
+        } finally {
+            this.closeConnection(connection, statement, resultSet);
         }
-
     }
+
     public void addTrack(int playlistID, int trackID, boolean offlineAvailable) {
-        try{
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("insert into playlisttracks values(?, ?, ?)");
+        Connection connection = null;
+        PreparedStatement statement = null;
+        try {
+            connection = getConnection();
+            statement = connection.prepareStatement("insert into playlisttracks values(?, ?, ?)");
             statement.setInt(1, playlistID);
             statement.setInt(2, trackID);
             statement.setBoolean(3, offlineAvailable);
             statement.executeUpdate();
-            connection.close();
-        } catch(SQLException e){
+        } catch (SQLException e) {
             logger.warning("Failed to add track to playlist");
             e.printStackTrace();
+        } finally {
+            this.closeConnection(connection, statement, null);
         }
     }
 
     public void deleteTrack(int playlistID, int trackID) {
-        try{
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("delete from playlisttracks where playlistID = ? " +
+        Connection connection = null;
+        PreparedStatement statement = null;
+        try {
+            connection = getConnection();
+            statement = connection.prepareStatement("delete from playlisttracks where playlistID = ? " +
                     "and trackID = ?");
             statement.setInt(1, playlistID);
             statement.setInt(2, trackID);
             statement.executeUpdate();
-            connection.close();
-        } catch(SQLException e){
+        } catch (SQLException e) {
             logger.warning("Failed to delete the track");
             e.printStackTrace();
+        } finally {
+            this.closeConnection(connection, statement, null);
         }
     }
 

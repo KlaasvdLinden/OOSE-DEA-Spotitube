@@ -3,6 +3,7 @@ package Dao.Playlist;
 import Dao.DAO;
 import Domain.Playlist.Playlist;
 import Domain.Playlists.Playlists;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,73 +17,82 @@ public class PlaylistDAO extends DAO {
 
 
     public Playlists findAll(String token) {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
         Playlists playlists = new Playlists();
         playlists.setLength(123);
         try {
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("select id, playlists.user, name, owner from " +
+            connection = getConnection();
+            statement = connection.prepareStatement("select id, playlists.user, name, owner from " +
                     "spotitube.playlists inner join spotitube.token on playlists.user = token.user where token = ?");
             statement.setString(1, token);
-            ResultSet resultSet = statement.executeQuery();
+            resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Playlist playlist = buildPlaylist(resultSet);
                 playlists.addPlayList(playlist);
             }
-            connection.close();
             return playlists;
         } catch (SQLException e) {
             logger.warning("Failed to get all playlists from database");
             e.printStackTrace();
             return null;
-
+        } finally {
+            this.closeConnection(connection, statement, resultSet);
         }
-
     }
 
     public void editPlaylist(int id, String name) {
+        Connection connection = null;
+        PreparedStatement statement = null;
         try {
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("update playlists set name = ? where id = ?");
+            connection = getConnection();
+            statement = connection.prepareStatement("update playlists set name = ? where id = ?");
             statement.setString(1, name);
             statement.setInt(2, id);
             statement.executeUpdate();
-            connection.close();
         } catch (SQLException e) {
             logger.warning("Failed to edit the playlist name");
             e.printStackTrace();
+        } finally {
+            this.closeConnection(connection, statement, null);
         }
     }
 
     public void addPlaylist(String name, String owner) {
-        try{
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("insert into playlists values(null, ?, ?, 1)");
+        Connection connection = null;
+        PreparedStatement statement = null;
+        try {
+            connection = getConnection();
+            statement = connection.prepareStatement("insert into playlists values(null, ?, ?, 1)");
             statement.setString(1, owner);
             statement.setString(2, name);
             statement.executeUpdate();
-            connection.close();
-        } catch(SQLException e){
+        } catch (SQLException e) {
             logger.warning("Failed to insert the playlist");
             e.printStackTrace();
+        } finally {
+            this.closeConnection(connection, statement, null);
         }
-
     }
 
     public void deletePlaylist(int id) {
-        try{
-            Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement("delete from playlists where id = ?");
+        Connection connection = null;
+        PreparedStatement statement = null;
+        try {
+            connection = getConnection();
+            statement = connection.prepareStatement("delete from playlists where id = ?");
             statement.setInt(1, id);
             statement.executeUpdate();
-            connection.close();
-        } catch(SQLException e){
+        } catch (SQLException e) {
             logger.warning("Failed to delete the playlist");
             e.printStackTrace();
+        } finally {
+            this.closeConnection(connection, statement, null);
         }
     }
 
     private Playlist buildPlaylist(ResultSet resultSet) throws SQLException {
-
         int id = resultSet.getInt("id");
         String name = resultSet.getString("name");
         boolean owner = resultSet.getBoolean("owner");
@@ -91,9 +101,5 @@ public class PlaylistDAO extends DAO {
         playlist.setName(name);
         playlist.setOwner(owner);
         return playlist;
-
     }
-
-
-
 }

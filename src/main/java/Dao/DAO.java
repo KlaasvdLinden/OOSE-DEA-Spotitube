@@ -2,9 +2,7 @@ package Dao;
 
 import Dao.util.DatabaseProperties;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,6 +24,16 @@ public abstract class DAO {
 
     protected Connection getConnection() throws SQLException {
         return DriverManager.getConnection(databaseProperties.connectionString());
+    }
+
+    protected void closeConnection(Connection connection, PreparedStatement statement, ResultSet result) {
+        try {
+            if (connection != null) connection.close();
+            if (statement != null) statement.close();
+            if (result != null) result.close();
+        } catch (SQLException e) {
+            System.out.println("Error closing connection: " + e.getMessage());
+        }
     }
 
 }
