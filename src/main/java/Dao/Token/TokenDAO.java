@@ -28,7 +28,6 @@ public class TokenDAO extends DAO {
         } else{
             responseLogin = generateAndSaveToken(user, UPDATE_TOKEN_QUERY);
         }
-
         return responseLogin;
     }
 

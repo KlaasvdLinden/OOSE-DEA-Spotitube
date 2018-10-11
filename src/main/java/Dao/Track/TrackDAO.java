@@ -28,13 +28,13 @@ public class TrackDAO extends DAO {
             while (resultSet.next()) {
                 tracks.add(buildTrack(resultSet));
             }
-            return tracks;
+
         } catch (SQLException e) {
             logger.warning("Failed to get all tracks from database");
             e.printStackTrace();
-            return null;
         } finally {
             this.closeConnection(connection, statement, resultSet);
+            return tracks;
         }
     }
 
@@ -58,7 +58,6 @@ public class TrackDAO extends DAO {
         track.setPlaycount(playcount);
         track.setPublicationDate(publicationDate);
         track.setDescription(description);
-
 
         return track;
     }

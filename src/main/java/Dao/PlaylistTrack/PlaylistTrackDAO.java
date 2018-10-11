@@ -31,13 +31,13 @@ public class PlaylistTrackDAO extends DAO {
             while (resultSet.next()) {
                 tracks.add(buildTrack(resultSet));
             }
-            return tracks;
+
         } catch (SQLException e) {
             logger.warning("Failed to get all tracks from database");
             e.printStackTrace();
-            return null;
         } finally {
             this.closeConnection(connection, statement, resultSet);
+            return tracks;
         }
     }
 

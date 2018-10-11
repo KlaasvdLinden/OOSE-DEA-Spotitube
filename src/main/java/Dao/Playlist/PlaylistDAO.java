@@ -32,13 +32,13 @@ public class PlaylistDAO extends DAO {
                 Playlist playlist = buildPlaylist(resultSet);
                 playlists.addPlayList(playlist);
             }
-            return playlists;
+
         } catch (SQLException e) {
             logger.warning("Failed to get all playlists from database");
             e.printStackTrace();
-            return null;
         } finally {
             this.closeConnection(connection, statement, resultSet);
+            return playlists;
         }
     }
 

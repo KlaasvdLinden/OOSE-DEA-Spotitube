@@ -9,7 +9,18 @@
     <list default="true" id="2c068539-91c0-45d8-a977-538571a02383" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Playlist/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Playlist/PlaylistDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/PlaylistTrack/PlaylistTrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/PlaylistTrack/PlaylistTrackDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Token/TokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Token/TokenDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Track/TrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Track/TrackDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/EAI.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/EAI.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Playlist/PlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Playlist/PlaylistDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/PlaylistTrack/PlaylistTrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/PlaylistTrack/PlaylistTrackDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Token/TokenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Token/TokenDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Track/TrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Track/TrackDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Dao/Playlist/PlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Dao/Playlist/PlaylistDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Dao/PlaylistTrack/PlaylistTrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Dao/PlaylistTrack/PlaylistTrackDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Dao/Token/TokenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Dao/Token/TokenDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Dao/Track/TrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Dao/Track/TrackDAO.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -81,14 +92,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="132" />
+          <entry key="java" value="139" />
           <entry key="properties" value="2" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="132" />
+          <entry key="JAVA" value="139" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="2" />
         </counts>
@@ -96,14 +107,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="153" />
-          <entry key="java" value="12536" />
+          <entry key="java" value="12542" />
           <entry key="properties" value="18" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12530" />
+          <entry key="JAVA" value="12536" />
           <entry key="PLAIN_TEXT" value="153" />
           <entry key="Properties" value="18" />
           <entry key="SQL" value="6" />
@@ -121,35 +132,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Playlist/PlaylistDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+            <state relative-caret-position="68">
+              <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Controllers/PlaylistController/PlaylistController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="25" column="54" lean-forward="true" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Service/PlaylistService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#295#296#0" expanded="true" />
-                <element signature="e#344#345#0" expanded="true" />
-                <element signature="e#605#606#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -219,12 +205,12 @@
         <option value="$PROJECT_DIR$/src/main/java/Service/PlaylistTrackService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/User/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/DAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Dao/PlaylistTrack/PlaylistTrackDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Dao/Track/TrackDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Dao/Token/TokenDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Playlist/PlaylistDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Dao/PlaylistTrack/PlaylistTrackDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Dao/Token/TokenDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Dao/Track/TrackDAO.java" />
       </list>
     </option>
   </component>
@@ -269,11 +255,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="85" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -313,23 +298,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="PlaylistController" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -358,7 +326,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539244711317" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539247249557" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -530,7 +498,7 @@
       <workItem from="1539086901926" duration="912000" />
       <workItem from="1539153531621" duration="10716000" />
       <workItem from="1539181166890" duration="28000" />
-      <workItem from="1539239035826" duration="5649000" />
+      <workItem from="1539239035826" duration="7990000" />
     </task>
     <servers />
   </component>
@@ -543,7 +511,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81528000" />
+    <option name="totallyTimeSpent" value="83869000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -558,7 +526,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32080537" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32080537" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -568,7 +536,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -718,36 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/PlaylistTrack/PlaylistTrackDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="74" column="10" lean-forward="true" selection-start-line="74" selection-start-column="10" selection-end-line="76" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/User/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="18" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Track/TrackDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="37" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Dao/DAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
@@ -773,13 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="7" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Token/TokenDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -835,10 +766,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/PlaylistTrack/PlaylistTrackDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-884">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Token/TokenDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-646">
+          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Track/TrackDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/User/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="18" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Playlist/PlaylistDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+        <state relative-caret-position="68">
+          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
