@@ -21,7 +21,7 @@ public class PlaylistDAO extends DAO {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         Playlists playlists = new Playlists();
-        playlists.setLength(123);
+        playlists.setLength(totalPlaylistLength(token));
         try {
             connection = getConnection();
             statement = connection.prepareStatement("select id, playlists.user, name, owner from " +
@@ -41,6 +41,35 @@ public class PlaylistDAO extends DAO {
             this.closeConnection(connection, statement, resultSet);
         }
     }
+
+    public int totalPlaylistLength(String token){
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        int totalLength = 0;
+        try{
+            connection = getConnection();
+            statement = connection.prepareStatement("select sum(duration) as totalDuration from spotitube.tracks " +
+                    "inner join spotitube.playlisttracks on tracks.id = playlisttracks.trackID \n" +
+                    "where playlisttracks.playlistID in (\n" +
+                    "select playlistid from \n" +
+                    "spotitube.playlists inner join spotitube.token on playlists.user = token.user\n" +
+                    "where token =  ?\n" +
+                    ")");
+            statement.setString(1, token);
+            resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                totalLength = resultSet.getInt("totalDuration");
+            }
+        } catch(SQLException e){
+            logger.warning("Failed to get total length of all playlists");
+            e.printStackTrace();
+        } finally{
+            closeConnection(connection, statement, resultSet);
+            return totalLength;
+        }
+    }
+
 
     public void editPlaylist(int id, String name) {
         Connection connection = null;
