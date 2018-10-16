@@ -1,5 +1,6 @@
 package Controllers.TrackController;
 
+import Exceptions.AccesNotAllowedException;
 import Service.TrackService;
 import Service.UserService;
 
@@ -20,9 +21,10 @@ public class TrackController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllTracks(@QueryParam("forPlaylist") int playlistID, @QueryParam("token") String token){
-        if(userService.rightToken(token)){
+        try{
+            userService.rightToken(token);
             return Response.ok(trackService.getAll(playlistID), MediaType.APPLICATION_JSON).build();
-        } else{
+        } catch(AccesNotAllowedException e){
             return Response.status(403).build();
 
         }

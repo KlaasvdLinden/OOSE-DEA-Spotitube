@@ -11,10 +11,10 @@ public class PlaylistService {
     @Inject
     UserService userService;
 
-    private PlaylistDAO playlistDAO = new PlaylistDAO();
+    private PlaylistDAO playlistDAO;
 
-    public Playlists getPlaylist(String token){
-        return playlistDAO.findAll(token);
+    public Playlists getPlaylist(int userID){
+        return playlistDAO.findAll(userID);
     }
 
     public void editPlaylist(int id, String name){
@@ -22,10 +22,15 @@ public class PlaylistService {
     }
 
     public void addPlaylist(String name) {
-        playlistDAO.addPlaylist(name, userService.getUserName());
+        playlistDAO.addPlaylist(userService.getUserID(), name);
     }
 
     public void deletePlaylist(int id) {
         playlistDAO.deletePlaylist(id);
+    }
+
+    @Inject
+    public void setPlaylistDAO(PlaylistDAO playlistDAO){
+        this.playlistDAO = playlistDAO;
     }
 }

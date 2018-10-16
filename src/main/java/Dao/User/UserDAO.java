@@ -1,6 +1,7 @@
 package Dao.User;
 
 import Dao.DAO;
+import Dao.Entity.User;
 import Dao.util.DatabaseProperties;
 import Domain.Login.RequestLogin;
 
@@ -12,7 +13,7 @@ public class UserDAO extends DAO {
 
     private Logger logger = Logger.getLogger(getClass().getName());
 
-    public RequestLogin getUser(String user, String password){
+    public User getUser(String user, String password){
 
         Connection connection = null;
         PreparedStatement statement = null;
@@ -34,13 +35,15 @@ public class UserDAO extends DAO {
         return null;
     }
 
-    private RequestLogin buildRequestLogin(ResultSet resultSet) throws SQLException {
-        String user = resultSet.getString("user");
+    private User buildRequestLogin(ResultSet resultSet) throws SQLException {
+        int id = resultSet.getInt("id");
+        String username = resultSet.getString("user");
         String password = resultSet.getString("password");
-        RequestLogin rl = new RequestLogin();
-        rl.setUser(user);
-        rl.setPassword(password);
-        return rl;
+        User user = new User();
+        user.setId(id);
+        user.setUsername(username);
+        user.setPassword(password);
+        return user;
     }
 
 }

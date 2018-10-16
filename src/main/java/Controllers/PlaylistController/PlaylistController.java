@@ -2,6 +2,7 @@ package Controllers.PlaylistController;
 
 
 import Domain.Playlist.Playlist;
+import Exceptions.AccesNotAllowedException;
 import Service.UserService;
 
 import javax.inject.Inject;
@@ -22,9 +23,10 @@ public class PlaylistController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getPlayLists(@QueryParam("token") String token) {
-        if (userService.rightToken(token)) {
-            return Response.ok(playlistService.getPlaylist(token), MediaType.APPLICATION_JSON).build();
-        } else {
+        try {
+            int userID = userService.rightToken(token);
+            return Response.ok(playlistService.getPlaylist(userID), MediaType.APPLICATION_JSON).build();
+        } catch (AccesNotAllowedException e) {
             return Response.status(403).build();
         }
     }
@@ -34,10 +36,11 @@ public class PlaylistController {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{id}")
     public Response editPlaylist(@QueryParam("token") String token, @PathParam("id") int id, Playlist playlist) {
-        if (userService.rightToken(token)) {
+        try {
+            int userID = userService.rightToken(token);
             playlistService.editPlaylist(id, playlist.getName());
-            return Response.ok(playlistService.getPlaylist(token), MediaType.APPLICATION_JSON).build();
-        } else{
+            return Response.ok(playlistService.getPlaylist(userID), MediaType.APPLICATION_JSON).build();
+        } catch (AccesNotAllowedException e) {
             return Response.status(403).build();
         }
     }
@@ -45,12 +48,12 @@ public class PlaylistController {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response addPlaylist(@QueryParam("token") String token, Playlist playlist){
-        if(userService.rightToken(token)){
+    public Response addPlaylist(@QueryParam("token") String token, Playlist playlist) {
+        try {
+            int userID = userService.rightToken(token);
             playlistService.addPlaylist(playlist.getName());
-            return Response.ok(playlistService.getPlaylist(token), MediaType.APPLICATION_JSON).build();
-        }
-        else{
+            return Response.ok(playlistService.getPlaylist(userID), MediaType.APPLICATION_JSON).build();
+        } catch (AccesNotAllowedException e) {
             return Response.status(403).build();
         }
     }
@@ -58,11 +61,12 @@ public class PlaylistController {
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}")
-    public Response deletePlaylist(@QueryParam("token") String token, @PathParam("id") int id){
-        if(userService.rightToken(token)){
+    public Response deletePlaylist(@QueryParam("token") String token, @PathParam("id") int id) {
+        try  {
+            int userID = userService.rightToken(token);
             playlistService.deletePlaylist(id);
-            return Response.ok(playlistService.getPlaylist(token), MediaType.APPLICATION_JSON).build();
-        } else{
+            return Response.ok(playlistService.getPlaylist(userID), MediaType.APPLICATION_JSON).build();
+        } catch(AccesNotAllowedException e) {
             return Response.status(403).build();
         }
 

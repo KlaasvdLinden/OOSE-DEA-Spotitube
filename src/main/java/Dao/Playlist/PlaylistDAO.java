@@ -16,17 +16,16 @@ public class PlaylistDAO extends DAO {
     private Logger logger = Logger.getLogger(getClass().getName());
 
 
-    public Playlists findAll(String token) {
+    public Playlists findAll(int userID) {
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         Playlists playlists = new Playlists();
-        playlists.setLength(totalPlaylistLength(token));
+        playlists.setLength(totalPlaylistLength(userID));
         try {
             connection = getConnection();
-            statement = connection.prepareStatement("select id, playlists.user, name, owner from " +
-                    "spotitube.playlists inner join spotitube.token on playlists.user = token.user where token = ?");
-            statement.setString(1, token);
+            statement = connection.prepareStatement("select * from playlists where userID = ?");
+            statement.setInt(1, userID);
             resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Playlist playlist = buildPlaylist(resultSet);
@@ -38,25 +37,22 @@ public class PlaylistDAO extends DAO {
             e.printStackTrace();
         } finally {
             this.closeConnection(connection, statement, resultSet);
-            return playlists;
         }
+        return playlists;
     }
 
-    public int totalPlaylistLength(String token){
+    private int totalPlaylistLength(int userID){
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         int totalLength = 0;
         try{
             connection = getConnection();
-            statement = connection.prepareStatement("select sum(duration) as totalDuration from spotitube.tracks " +
-                    "inner join spotitube.playlisttracks on tracks.id = playlisttracks.trackID \n" +
-                    "where playlisttracks.playlistID in (\n" +
-                    "select playlistid from \n" +
-                    "spotitube.playlists inner join spotitube.token on playlists.user = token.user\n" +
-                    "where token =  ?\n" +
-                    ")");
-            statement.setString(1, token);
+            statement = connection.prepareStatement("select sum(duration) as totalDuration from spotitube.tracks\n" +
+                    "                    inner join spotitube.playlisttracks on tracks.id = playlisttracks.trackID\n" +
+                    "                    where playlisttracks.playlistID in (\n" +
+                    "                    select playlistid from spotitube.playlists where userID = ? )");
+            statement.setInt(1, userID);
             resultSet = statement.executeQuery();
             while(resultSet.next()){
                 totalLength = resultSet.getInt("totalDuration");
@@ -66,8 +62,8 @@ public class PlaylistDAO extends DAO {
             e.printStackTrace();
         } finally{
             closeConnection(connection, statement, resultSet);
-            return totalLength;
         }
+        return totalLength;
     }
 
 
@@ -88,13 +84,13 @@ public class PlaylistDAO extends DAO {
         }
     }
 
-    public void addPlaylist(String name, String owner) {
+    public void addPlaylist(int userId, String name) {
         Connection connection = null;
         PreparedStatement statement = null;
         try {
             connection = getConnection();
             statement = connection.prepareStatement("insert into playlists values(null, ?, ?, 1)");
-            statement.setString(1, owner);
+            statement.setInt(1, userId);
             statement.setString(2, name);
             statement.executeUpdate();
         } catch (SQLException e) {

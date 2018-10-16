@@ -37,8 +37,8 @@ public class PlaylistTrackDAO extends DAO {
             e.printStackTrace();
         } finally {
             this.closeConnection(connection, statement, resultSet);
-            return tracks;
         }
+        return tracks;
     }
 
     public void addTrack(int playlistID, int trackID, boolean offlineAvailable) {

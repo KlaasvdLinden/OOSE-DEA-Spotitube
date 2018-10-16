@@ -3,10 +3,12 @@ package Service;
 import Dao.PlaylistTrack.PlaylistTrackDAO;
 import Domain.Track.TracksResponse;
 
+import javax.inject.Inject;
+
 
 public class PlaylistTrackService {
 
-    PlaylistTrackDAO playlistTrackDAO = new PlaylistTrackDAO();
+    PlaylistTrackDAO playlistTrackDAO;
 
     public TracksResponse getTracks(int id){
         return new TracksResponse(playlistTrackDAO.findAll(id));
@@ -19,4 +21,10 @@ public class PlaylistTrackService {
     public void deleteTrack(int playlistID, int trackID) {
         playlistTrackDAO.deleteTrack(playlistID, trackID);
     }
+
+    @Inject
+    public void setPlaylistTrackDAO(PlaylistTrackDAO playlistTrackDAO){
+        this.playlistTrackDAO = playlistTrackDAO;
+    }
+
 }
