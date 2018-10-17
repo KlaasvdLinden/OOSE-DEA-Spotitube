@@ -13,8 +13,8 @@ public class PlaylistService {
 
     private PlaylistDAO playlistDAO;
 
-    public Playlists getPlaylist(int userID){
-        return playlistDAO.findAll(userID);
+    public Playlists getPlaylist(){
+        return playlistDAO.findAll(userService.getUserID());
     }
 
     public void editPlaylist(int id, String name){

@@ -21,14 +21,13 @@ public class PlaylistDAO extends DAO {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         Playlists playlists = new Playlists();
-        playlists.setLength(totalPlaylistLength(userID));
+        playlists.setLength(totalPlaylistLength());
         try {
             connection = getConnection();
-            statement = connection.prepareStatement("select * from playlists where userID = ?");
-            statement.setInt(1, userID);
+            statement = connection.prepareStatement("select * from playlists");
             resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                Playlist playlist = buildPlaylist(resultSet);
+                Playlist playlist = buildPlaylist(resultSet, userID);
                 playlists.addPlayList(playlist);
             }
 
@@ -41,7 +40,7 @@ public class PlaylistDAO extends DAO {
         return playlists;
     }
 
-    private int totalPlaylistLength(int userID){
+    private int totalPlaylistLength(){
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
@@ -49,10 +48,7 @@ public class PlaylistDAO extends DAO {
         try{
             connection = getConnection();
             statement = connection.prepareStatement("select sum(duration) as totalDuration from spotitube.tracks\n" +
-                    "                    inner join spotitube.playlisttracks on tracks.id = playlisttracks.trackID\n" +
-                    "                    where playlisttracks.playlistID in (\n" +
-                    "                    select playlistid from spotitube.playlists where userID = ? )");
-            statement.setInt(1, userID);
+                    "inner join spotitube.playlisttracks on tracks.id = playlisttracks.trackID");
             resultSet = statement.executeQuery();
             while(resultSet.next()){
                 totalLength = resultSet.getInt("totalDuration");
@@ -89,7 +85,7 @@ public class PlaylistDAO extends DAO {
         PreparedStatement statement = null;
         try {
             connection = getConnection();
-            statement = connection.prepareStatement("insert into playlists values(null, ?, ?, 1)");
+            statement = connection.prepareStatement("insert into playlists values(null, ?, ?)");
             statement.setInt(1, userId);
             statement.setString(2, name);
             statement.executeUpdate();
@@ -117,14 +113,18 @@ public class PlaylistDAO extends DAO {
         }
     }
 
-    private Playlist buildPlaylist(ResultSet resultSet) throws SQLException {
+    private Playlist buildPlaylist(ResultSet resultSet, int user) throws SQLException {
         int id = resultSet.getInt("id");
+        int userID = resultSet.getInt("userID");
         String name = resultSet.getString("name");
-        boolean owner = resultSet.getBoolean("owner");
         Playlist playlist = new Playlist();
         playlist.setId(id);
         playlist.setName(name);
-        playlist.setOwner(owner);
+        if(userID == user){
+            playlist.setOwner(true);
+        } else{
+            playlist.setOwner(false);
+        }
         return playlist;
     }
 }

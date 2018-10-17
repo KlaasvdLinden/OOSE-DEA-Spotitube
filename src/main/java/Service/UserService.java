@@ -50,11 +50,11 @@ public class UserService {
         return null;
     }
 
-    public int rightToken(String token) throws AccesNotAllowedException {
+    public boolean rightToken(String token) {
         if(token.equals(token)){
-            return userID;
+            return true;
         }
-        throw new AccesNotAllowedException();
+       return false;
     }
 
 

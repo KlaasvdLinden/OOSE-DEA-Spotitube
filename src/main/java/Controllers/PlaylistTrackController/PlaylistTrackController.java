@@ -24,37 +24,32 @@ public class PlaylistTrackController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getTracks(@QueryParam("token") String token, @PathParam("id") int id) {
-        try{
-            userService.rightToken(token);
-            return Response.ok(playlistTrackService.getTracks(id), MediaType.APPLICATION_JSON).build();
-        } catch(AccesNotAllowedException e) {
+        if (!userService.rightToken(token)) {
             return Response.status(403).build();
         }
+        return Response.ok(playlistTrackService.getTracks(id), MediaType.APPLICATION_JSON).build();
     }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response addTrack(@QueryParam("token") String token, @PathParam("id") int id, Track track){
-        try{
-            userService.rightToken(token);
-            playlistTrackService.addTrack(id, track.getId(), track.isOfflineAvailable());
-            return Response.ok(playlistTrackService.getTracks(id), MediaType.APPLICATION_JSON).build();
-        } catch(AccesNotAllowedException e){
+    public Response addTrack(@QueryParam("token") String token, @PathParam("id") int id, Track track) {
+        if (!userService.rightToken(token)) {
             return Response.status(403).build();
         }
+        playlistTrackService.addTrack(id, track.getId(), track.isOfflineAvailable());
+        return Response.ok(playlistTrackService.getTracks(id), MediaType.APPLICATION_JSON).build();
     }
 
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{trackid}")
-    public Response deleteTrack(@QueryParam("token") String token, @PathParam("id") int playlistID, @PathParam("trackid") int trackID){
-        try{
-            userService.rightToken(token);
-            playlistTrackService.deleteTrack(playlistID, trackID);
-            return Response.ok(playlistTrackService.getTracks(playlistID), MediaType.APPLICATION_JSON).build();
-        } catch(AccesNotAllowedException e){
+    public Response deleteTrack(@QueryParam("token") String token, @PathParam("id") int playlistID, @PathParam("trackid") int trackID) {
+        if (!userService.rightToken(token)) {
             return Response.status(403).build();
         }
+        playlistTrackService.deleteTrack(playlistID, trackID);
+        return Response.ok(playlistTrackService.getTracks(playlistID), MediaType.APPLICATION_JSON).build();
+
     }
 }

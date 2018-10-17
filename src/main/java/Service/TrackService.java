@@ -1,11 +1,10 @@
 package Service;
 
 import Dao.Track.TrackDAO;
-import Domain.Track.Track;
 import Domain.Track.TracksResponse;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
+
 
 public class TrackService {
 

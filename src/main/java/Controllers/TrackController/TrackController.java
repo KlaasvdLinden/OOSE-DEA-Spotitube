@@ -20,14 +20,10 @@ public class TrackController {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAllTracks(@QueryParam("forPlaylist") int playlistID, @QueryParam("token") String token){
-        try{
-            userService.rightToken(token);
-            return Response.ok(trackService.getAll(playlistID), MediaType.APPLICATION_JSON).build();
-        } catch(AccesNotAllowedException e){
+    public Response getAllTracks(@QueryParam("forPlaylist") int playlistID, @QueryParam("token") String token) {
+        if (!userService.rightToken(token)) {
             return Response.status(403).build();
-
         }
-
+        return Response.ok(trackService.getAll(playlistID), MediaType.APPLICATION_JSON).build();
     }
 }
