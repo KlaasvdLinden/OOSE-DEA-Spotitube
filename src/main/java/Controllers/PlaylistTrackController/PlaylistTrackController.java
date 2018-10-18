@@ -1,9 +1,8 @@
 package Controllers.PlaylistTrackController;
 
 import Domain.Track.Track;
-import Exceptions.AccesNotAllowedException;
-import Service.PlaylistTrackService;
-import Service.UserService;
+import Service.PlaylistTrack.PlaylistTrackService;
+import Service.User.UserService;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;

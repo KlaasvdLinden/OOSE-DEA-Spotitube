@@ -1,15 +1,13 @@
-package Service;
+package Service.User;
 
 import Dao.Entity.User;
 import Dao.Token.TokenDAO;
 import Dao.User.UserDAO;
 import Domain.Login.ResponseLogin;
-import Exceptions.AccesNotAllowedException;
 
 import javax.inject.Inject;
-import javax.ws.rs.NotAuthorizedException;
 
-public class UserService {
+public class UserService implements  IUserService {
 
     private  static UserService instance  = null;
 
@@ -36,6 +34,7 @@ public class UserService {
         return userID;
     }
 
+    @Override
     public ResponseLogin authenticate(String userName, String password){
         User user = new UserDAO().getUser(userName, password);
 
@@ -50,6 +49,7 @@ public class UserService {
         return null;
     }
 
+    @Override
     public boolean rightToken(String token) {
         if(token.equals(token)){
             return true;

@@ -1,9 +1,8 @@
 package Controllers.LoginController;
 
-import Dao.Token.TokenDAO;
 import Domain.Login.RequestLogin;
 import Domain.Login.ResponseLogin;
-import Service.UserService;
+import Service.User.UserService;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;

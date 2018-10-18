@@ -1,8 +1,7 @@
 package Controllers.TrackController;
 
-import Exceptions.AccesNotAllowedException;
-import Service.TrackService;
-import Service.UserService;
+import Service.Track.TrackService;
+import Service.User.UserService;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;

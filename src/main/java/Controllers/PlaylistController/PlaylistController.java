@@ -2,8 +2,8 @@ package Controllers.PlaylistController;
 
 
 import Domain.Playlist.Playlist;
-import Exceptions.AccesNotAllowedException;
-import Service.UserService;
+import Service.Playlist.PlaylistService;
+import Service.User.UserService;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -14,7 +14,7 @@ import javax.ws.rs.core.Response;
 @Path("/playlists")
 public class PlaylistController {
     @Inject
-    private Service.PlaylistService playlistService;
+    private PlaylistService playlistService;
 
     @Inject
     private UserService userService;
