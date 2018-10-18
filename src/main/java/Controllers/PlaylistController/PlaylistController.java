@@ -2,7 +2,9 @@ package Controllers.PlaylistController;
 
 
 import Domain.Playlist.Playlist;
+import Service.Playlist.IPlaylistService;
 import Service.Playlist.PlaylistService;
+import Service.User.IUserService;
 import Service.User.UserService;
 
 import javax.inject.Inject;
@@ -14,10 +16,10 @@ import javax.ws.rs.core.Response;
 @Path("/playlists")
 public class PlaylistController {
     @Inject
-    private PlaylistService playlistService;
+    private IPlaylistService playlistService;
 
     @Inject
-    private UserService userService;
+    private IUserService userService;
 
 
     @GET

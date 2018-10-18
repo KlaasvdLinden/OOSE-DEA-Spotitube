@@ -6,7 +6,7 @@ import Domain.Track.TracksResponse;
 import javax.inject.Inject;
 
 
-public class PlaylistTrackService implements  IPlaylistTrackService {
+public class PlaylistTrackService implements IPlaylistTrackService {
 
     PlaylistTrackDAO playlistTrackDAO;
 

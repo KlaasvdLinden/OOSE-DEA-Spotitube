@@ -1,7 +1,9 @@
 package Controllers.PlaylistTrackController;
 
 import Domain.Track.Track;
+import Service.PlaylistTrack.IPlaylistTrackService;
 import Service.PlaylistTrack.PlaylistTrackService;
+import Service.User.IUserService;
 import Service.User.UserService;
 
 import javax.inject.Inject;
@@ -13,10 +15,10 @@ import javax.ws.rs.core.Response;
 public class PlaylistTrackController {
 
     @Inject
-    PlaylistTrackService playlistTrackService;
+    private IPlaylistTrackService playlistTrackService;
 
     @Inject
-    private UserService userService;
+    private IUserService userService;
 
 
     @GET

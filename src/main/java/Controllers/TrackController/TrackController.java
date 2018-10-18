@@ -1,6 +1,8 @@
 package Controllers.TrackController;
 
+import Service.Track.ITrackService;
 import Service.Track.TrackService;
+import Service.User.IUserService;
 import Service.User.UserService;
 
 import javax.inject.Inject;
@@ -12,10 +14,10 @@ import javax.ws.rs.core.Response;
 public class TrackController {
 
     @Inject
-    TrackService trackService;
+    private ITrackService trackService;
 
     @Inject
-    UserService userService;
+    private IUserService userService;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
