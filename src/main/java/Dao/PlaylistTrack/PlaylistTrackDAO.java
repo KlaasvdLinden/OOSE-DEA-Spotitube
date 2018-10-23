@@ -10,22 +10,24 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
-public class PlaylistTrackDAO extends DAO {
+public class PlaylistTrackDAO extends DAO implements PlaylistTrackMapper {
 
 
     private Logger logger = Logger.getLogger(getClass().getName());
+    private static final String FIND_ALL_TRACKS_QUERY = "SELECT * from spotitube.tracks inner join playlisttracks " +
+            "on tracks.id = playlisttracks.trackID where playlistID = ?";
+    private static final String ADD_TRACK_QUERY = "INSERT INTO playlisttracks values(?, ?, ?)";
+    private static final String DELETE_TRACK_QUERY = "DELETE from playlisttracks where playlistID = ? and trackID = ?";
 
+    @Override
     public ArrayList<Track> findAll(int id) {
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
-        ;
         ArrayList<Track> tracks = new ArrayList<Track>();
         try {
             connection = getConnection();
-            statement = connection.prepareStatement("select * from spotitube.tracks inner join " +
-                    "spotitube.playlisttracks on tracks.id = playlisttracks.trackID\n" +
-                    "where playlistID = ?");
+            statement = connection.prepareStatement(FIND_ALL_TRACKS_QUERY);
             statement.setInt(1, id);
             resultSet = statement.executeQuery();
             while (resultSet.next()) {
@@ -41,12 +43,13 @@ public class PlaylistTrackDAO extends DAO {
         return tracks;
     }
 
+    @Override
     public void addTrack(int playlistID, int trackID, boolean offlineAvailable) {
         Connection connection = null;
         PreparedStatement statement = null;
         try {
             connection = getConnection();
-            statement = connection.prepareStatement("insert into playlisttracks values(?, ?, ?)");
+            statement = connection.prepareStatement(ADD_TRACK_QUERY);
             statement.setInt(1, playlistID);
             statement.setInt(2, trackID);
             statement.setBoolean(3, offlineAvailable);
@@ -59,13 +62,13 @@ public class PlaylistTrackDAO extends DAO {
         }
     }
 
+    @Override
     public void deleteTrack(int playlistID, int trackID) {
         Connection connection = null;
         PreparedStatement statement = null;
         try {
             connection = getConnection();
-            statement = connection.prepareStatement("delete from playlisttracks where playlistID = ? " +
-                    "and trackID = ?");
+            statement = connection.prepareStatement(DELETE_TRACK_QUERY);
             statement.setInt(1, playlistID);
             statement.setInt(2, trackID);
             statement.executeUpdate();

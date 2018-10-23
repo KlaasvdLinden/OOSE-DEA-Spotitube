@@ -9,10 +9,12 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class UserDAO extends DAO {
+public class UserDAO extends DAO implements UserMapper {
 
     private Logger logger = Logger.getLogger(getClass().getName());
+    private static final String GET_USER_QUERY = "SELECT * from users where user = ? and password = ?";
 
+    @Override
     public User getUser(String user, String password){
 
         Connection connection = null;
@@ -20,7 +22,7 @@ public class UserDAO extends DAO {
         ResultSet resultSet = null ;
         try {
             connection = getConnection();
-            statement = connection.prepareStatement("SELECT * from users where user = ? and password = ?");
+            statement = connection.prepareStatement(GET_USER_QUERY);
             statement.setString(1, user);
             statement.setString(2, password);
             resultSet = statement.executeQuery();

@@ -1,6 +1,7 @@
 package Service.PlaylistTrack;
 
 import Dao.PlaylistTrack.PlaylistTrackDAO;
+import Dao.PlaylistTrack.PlaylistTrackMapper;
 import Domain.Track.TracksResponse;
 
 import javax.inject.Inject;
@@ -8,26 +9,23 @@ import javax.inject.Inject;
 
 public class PlaylistTrackService implements IPlaylistTrackService {
 
-    PlaylistTrackDAO playlistTrackDAO;
+    @Inject
+    PlaylistTrackMapper playlistTrackMapper;
 
     @Override
     public TracksResponse getTracks(int id){
-        return new TracksResponse(playlistTrackDAO.findAll(id));
+        return new TracksResponse(playlistTrackMapper.findAll(id));
     }
 
     @Override
     public void addTrack(int playlistID, int trackID, boolean offlineAvailable) {
-        playlistTrackDAO.addTrack(playlistID, trackID, offlineAvailable);
+        playlistTrackMapper.addTrack(playlistID, trackID, offlineAvailable);
     }
 
     @Override
     public void deleteTrack(int playlistID, int trackID) {
-        playlistTrackDAO.deleteTrack(playlistID, trackID);
+        playlistTrackMapper.deleteTrack(playlistID, trackID);
     }
 
-    @Inject
-    public void setPlaylistTrackDAO(PlaylistTrackDAO playlistTrackDAO){
-        this.playlistTrackDAO = playlistTrackDAO;
-    }
 
 }

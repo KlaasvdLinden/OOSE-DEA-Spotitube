@@ -2,6 +2,7 @@ package Service.User;
 
 import Dao.Entity.User;
 import Dao.Token.TokenDAO;
+import Dao.Token.TokenMapper;
 import Dao.User.UserDAO;
 import Domain.Login.ResponseLogin;
 
@@ -15,7 +16,8 @@ public class UserService implements  IUserService {
     private static int userID;
     private static String userName;
 
-    private TokenDAO tokenDAO;
+    @Inject
+    private TokenMapper tokenMapper;
 
     private UserService(){}
 
@@ -39,7 +41,7 @@ public class UserService implements  IUserService {
         User user = new UserDAO().getUser(userName, password);
 
         if(user != null){
-            ResponseLogin responseLogin = tokenDAO.updateToken(user.getId(), user.getUsername());
+            ResponseLogin responseLogin = tokenMapper.updateToken(user.getId(), user.getUsername());
             userToken = responseLogin.getToken();
             userName = responseLogin.getUser();
             userID =  user.getId();
@@ -51,15 +53,6 @@ public class UserService implements  IUserService {
 
     @Override
     public boolean rightToken(String token) {
-        if(token.equals(token)){
-            return true;
-        }
-       return false;
-    }
-
-
-    @Inject
-    public void setTokenDAO(TokenDAO tokenDAO){
-        this.tokenDAO = tokenDAO;
+        return token.equals(userToken);
     }
 }

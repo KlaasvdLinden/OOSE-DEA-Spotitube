@@ -10,10 +10,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
-public class TrackDAO extends DAO {
+public class TrackDAO extends DAO implements TrackMapper {
 
     private Logger logger = Logger.getLogger(getClass().getName());
+    private static final String GET_ALL_TRACKS_QUERY = "SELECT * from tracks where id not in " +
+            "(select trackID from playlisttracks where playlistID = ? )";
 
+    @Override
     public ArrayList<Track> getAll(int playlistID) {
         Connection connection = null;
         PreparedStatement statement = null;
@@ -21,8 +24,7 @@ public class TrackDAO extends DAO {
         ArrayList<Track> tracks = new ArrayList<>();
         try {
             connection = getConnection();
-            statement = connection.prepareStatement("select * from spotitube.tracks where id not in (\n" +
-                    "select trackID from spotitube.playlisttracks where playlistID = ? )");
+            statement = connection.prepareStatement(GET_ALL_TRACKS_QUERY);
             statement.setInt(1, playlistID);
             resultSet = statement.executeQuery();
             while (resultSet.next()) {
