@@ -3,6 +3,7 @@ package spotitube.test;
 import Controllers.LoginController.LoginController;
 import Domain.Login.RequestLogin;
 import Domain.Login.ResponseLogin;
+import Service.User.IUserService;
 import Service.User.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +23,7 @@ public class LoginControllerTest {
     private LoginController loginController;
 
     @Mock
-    private UserService userService;
+    private IUserService userService;
 
 
     @Test
@@ -39,5 +40,17 @@ public class LoginControllerTest {
 
         assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
         assertEquals(responseLogin, response.getEntity());
+    }
+
+    @Test
+    public void testLoginReturns401(){
+        RequestLogin requestLogin = new RequestLogin();
+        requestLogin.setUser("testuser");
+        requestLogin.setPassword("testpassword");
+
+        Mockito.when(userService.authenticate(Mockito.anyString(), Mockito.anyString())).thenReturn(null);
+
+        Response response = loginController.login(requestLogin);
+        assertEquals(Response.Status.UNAUTHORIZED.getStatusCode(), response.getStatus());
     }
 }

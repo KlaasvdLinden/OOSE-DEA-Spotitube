@@ -74,7 +74,7 @@
     <session id="-560421052">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
@@ -99,14 +99,14 @@
           <entry key="JAVA/Controllers" value="1" />
           <entry key="JavaScript-modules-diagram/C:/Users/klaas/Documents/School/OOSE/OOSE-DEA/OOSE-DEA-Spotitube/src/main" value="1" />
           <entry key="LoginController" value="1" />
-          <entry key="java" value="238" />
+          <entry key="java" value="251" />
           <entry key="properties" value="3" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="238" />
+          <entry key="JAVA" value="251" />
           <entry key="Properties" value="3" />
           <entry key="UML" value="4" />
           <entry key="XML" value="5" />
@@ -115,14 +115,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="173" />
-          <entry key="java" value="16642" />
+          <entry key="java" value="17883" />
           <entry key="properties" value="18" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16635" />
+          <entry key="JAVA" value="17876" />
           <entry key="PLAIN_TEXT" value="173" />
           <entry key="Properties" value="18" />
           <entry key="SQL" value="7" />
@@ -136,23 +136,13 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Dao/User/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -171,7 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Domain/login/Playlist/Playlists.java" />
         <option value="$PROJECT_DIR$/src/main/java/Playlist/Playlists.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service/PlaylistService/PlaylistController.java" />
         <option value="$PROJECT_DIR$/src/main/database.properties" />
@@ -198,7 +187,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Service/TrackService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/spotitube/test/LoginTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/spotitube/test/LoginControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service/IPlaylistService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service/PlaylistService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service/PlaylistTrack/IPlaylistTrackService.java" />
@@ -222,6 +210,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Dao/Track/TrackDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/PlaylistTrack/PlaylistTrackDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/User/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/spotitube/test/LoginControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/spotitube/test/PlaylistControllerTest.java" />
       </list>
     </option>
   </component>
@@ -309,16 +299,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -333,7 +314,7 @@
     <property name="SearchEverywhereHistoryKey" value="userDAO&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540282049285" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540286747302" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -363,7 +344,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TomEE Server.Run Application TomEE">
+  <component name="RunManager" selected="JUnit.PlaylistControllerTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="EAI" />
@@ -371,9 +352,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="spotitube.test.TestApp" />
+    <configuration name="LoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EAI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotitube.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotitube.test" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.test.LoginControllerTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -390,6 +378,20 @@
       <option name="MAIN_CLASS_NAME" value="spotitube.test.LoginControllerTest" />
       <option name="METHOD_NAME" value="testLoginReturnsOk" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EAI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotitube.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotitube.test" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.test.PlaylistControllerTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -483,17 +485,19 @@
     </configuration>
     <list>
       <item itemvalue="TomEE Server.Run Application TomEE" />
-      <item itemvalue="Application.TestApp" />
       <item itemvalue="JUnit.TestPlaylist" />
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.LoginControllerTest.testLoginReturnsOk" />
+      <item itemvalue="JUnit.LoginControllerTest" />
+      <item itemvalue="JUnit.PlaylistControllerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlaylistControllerTest" />
+        <item itemvalue="JUnit.LoginControllerTest" />
         <item itemvalue="JUnit.LoginControllerTest.testLoginReturnsOk" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.TestPlaylist" />
-        <item itemvalue="Application.TestApp" />
       </list>
     </recent_temporary>
   </component>
@@ -534,44 +538,44 @@
       <workItem from="1539860027487" duration="5750000" />
       <workItem from="1539866681692" duration="840000" />
       <workItem from="1540201905600" duration="129000" />
-      <workItem from="1540278750793" duration="3113000" />
+      <workItem from="1540278750793" duration="7844000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LoginTest_testLoginReturnsOk - 2018.10.18 at 13h 38m 35s.xml">
-      <configuration name="LoginTest.testLoginReturnsOk" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2018.10.23 at 11h 07m 53s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginTest_testLoginReturnsOk - 2018.10.18 at 13h 38m 47s.xml">
-      <configuration name="LoginTest.testLoginReturnsOk" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2018.10.23 at 11h 12m 51s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginTest_testLoginReturnsOk - 2018.10.18 at 13h 39m 27s.xml">
-      <configuration name="LoginTest.testLoginReturnsOk" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2018.10.23 at 11h 13m 09s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginTest_testLoginReturnsOk - 2018.10.18 at 13h 39m 48s.xml">
-      <configuration name="LoginTest.testLoginReturnsOk" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2018.10.23 at 11h 13m 23s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginTest_testLoginReturnsOk - 2018.10.18 at 13h 40m 29s.xml">
-      <configuration name="LoginTest.testLoginReturnsOk" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2018.10.23 at 11h 16m 53s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginTest_testLoginReturnsOk - 2018.10.18 at 13h 41m 37s.xml">
-      <configuration name="LoginTest.testLoginReturnsOk" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2018.10.23 at 11h 21m 23s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginTest_testLoginReturnsOk - 2018.10.18 at 13h 41m 55s.xml">
-      <configuration name="LoginTest.testLoginReturnsOk" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2018.10.23 at 11h 21m 40s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginTest_testLoginReturnsOk - 2018.10.18 at 13h 42m 53s.xml">
-      <configuration name="LoginTest.testLoginReturnsOk" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2018.10.23 at 11h 21m 53s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginTest_testLoginReturnsOk - 2018.10.18 at 13h 43m 03s.xml">
-      <configuration name="LoginTest.testLoginReturnsOk" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2018.10.23 at 11h 25m 14s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginTest_testLoginReturnsOk - 2018.10.18 at 13h 43m 43s.xml">
-      <configuration name="LoginTest.testLoginReturnsOk" configurationId="JUnit" />
+    <history-entry file="PlaylistControllerTest - 2018.10.23 at 11h 25m 53s.xml">
+      <configuration name="PlaylistControllerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112088000" />
+    <option name="totallyTimeSpent" value="116819000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -584,7 +588,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35973155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -596,7 +599,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -725,13 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/spotitube/test/LoginControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -757,13 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Service/User/IUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -868,20 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controllers/LoginController/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controllers/PlaylistController/PlaylistController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controllers/PlaylistTrackController/PlaylistTrackController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -961,24 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Service/User/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding>
-            <element signature="e#1274#1275#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Playlist/PlaylistDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1615">
-          <caret line="21" column="78" lean-forward="true" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Token/TokenDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1000,10 +957,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Playlist/PlaylistDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="78" lean-forward="true" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Dao/User/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Service/User/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controllers/LoginController/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Service/User/IUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/spotitube/test/LoginControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/spotitube/test/PlaylistControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="93" column="72" selection-start-line="93" selection-start-column="72" selection-end-line="93" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controllers/PlaylistController/PlaylistController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
         </state>
       </provider>
     </entry>
