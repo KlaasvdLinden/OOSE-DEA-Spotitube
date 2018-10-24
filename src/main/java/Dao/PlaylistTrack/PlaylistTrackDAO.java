@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
-public class PlaylistTrackDAO extends DAO implements PlaylistTrackMapper {
+public class PlaylistTrackDAO extends DAO implements PlaylistTrackDAOMapper {
 
 
     private Logger logger = Logger.getLogger(getClass().getName());

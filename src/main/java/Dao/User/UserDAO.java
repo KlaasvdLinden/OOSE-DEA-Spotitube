@@ -2,14 +2,12 @@ package Dao.User;
 
 import Dao.DAO;
 import Dao.Entity.User;
-import Dao.util.DatabaseProperties;
-import Domain.Login.RequestLogin;
 
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class UserDAO extends DAO implements UserMapper {
+public class UserDAO extends DAO implements UserDAOMapper {
 
     private Logger logger = Logger.getLogger(getClass().getName());
     private static final String GET_USER_QUERY = "SELECT * from users where user = ? and password = ?";

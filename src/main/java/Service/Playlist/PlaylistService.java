@@ -1,9 +1,7 @@
 package Service.Playlist;
 
-import Dao.Playlist.PlaylistDAO;
-import Dao.Playlist.PlaylistMapper;
-import Domain.Playlist.Playlist;
 import Domain.Playlists.Playlists;
+import IdentityMappers.PlaylistIdentityMapper;
 import Service.User.UserService;
 
 import javax.inject.Inject;
@@ -15,26 +13,26 @@ public class PlaylistService implements IPlaylistService {
     UserService userService;
 
     @Inject
-    PlaylistMapper playlistMapper;
+    PlaylistIdentityMapper playlistIdentityMapper;
 
     @Override
     public Playlists getPlaylist(){
-        return playlistMapper.findAll(userService.getUserID());
+        return playlistIdentityMapper.getPlaylists(userService.getUserID());
     }
 
     @Override
     public void editPlaylist(int id, String name){
-        playlistMapper.editPlaylist(id , name);
+        playlistIdentityMapper.editPlaylist(id , name);
     }
 
     @Override
     public void addPlaylist(String name) {
-        playlistMapper.addPlaylist(userService.getUserID(), name);
+        playlistIdentityMapper.addPlaylist(userService.getUserID(), name);
     }
 
     @Override
     public void deletePlaylist(int id) {
-        playlistMapper.deletePlaylist(id);
+        playlistIdentityMapper.deletePlaylist(id);
     }
 
 

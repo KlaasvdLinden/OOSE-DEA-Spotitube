@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
-public class PlaylistDAO extends DAO implements PlaylistMapper {
+public class PlaylistDAO extends DAO implements PlaylistDAOMapper {
 
 
     private Logger logger = Logger.getLogger(getClass().getName());
@@ -99,7 +99,8 @@ public class PlaylistDAO extends DAO implements PlaylistMapper {
         }
     }
 
-    private int totalPlaylistLength(){
+    @Override
+    public int totalPlaylistLength(){
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;

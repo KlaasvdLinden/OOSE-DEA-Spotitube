@@ -27,4 +27,6 @@ public class Playlists {
     public void setLength(int length) {
         this.length = length;
     }
+
+    public void addToLength(int value){this .length += value;}
 }

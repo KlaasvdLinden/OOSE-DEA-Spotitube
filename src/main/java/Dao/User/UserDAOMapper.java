@@ -2,7 +2,7 @@ package Dao.User;
 
 import Dao.Entity.User;
 
-public interface UserMapper {
+public interface UserDAOMapper {
 
     User getUser(String user, String password);
 }

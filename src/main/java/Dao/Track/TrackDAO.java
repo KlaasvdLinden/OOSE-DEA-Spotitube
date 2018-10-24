@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
-public class TrackDAO extends DAO implements TrackMapper {
+public class TrackDAO extends DAO implements TrackDAOMapper {
 
     private Logger logger = Logger.getLogger(getClass().getName());
     private static final String GET_ALL_TRACKS_QUERY = "SELECT * from tracks where id not in " +

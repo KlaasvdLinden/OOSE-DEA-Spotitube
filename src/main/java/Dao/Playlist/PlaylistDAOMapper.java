@@ -2,7 +2,7 @@ package Dao.Playlist;
 
 import Domain.Playlists.Playlists;
 
-public interface PlaylistMapper {
+public interface PlaylistDAOMapper {
 
     Playlists findAll(int userID);
 
@@ -11,4 +11,6 @@ public interface PlaylistMapper {
     void addPlaylist(int userID, String name);
 
     void deletePlaylist(int id);
+
+    int totalPlaylistLength();
 }

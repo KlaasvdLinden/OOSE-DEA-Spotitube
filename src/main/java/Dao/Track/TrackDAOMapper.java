@@ -4,7 +4,7 @@ import Domain.Track.Track;
 
 import java.util.ArrayList;
 
-public interface TrackMapper {
+public interface TrackDAOMapper {
 
     ArrayList<Track> getAll(int playlistID);
 }

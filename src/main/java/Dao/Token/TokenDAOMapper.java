@@ -2,6 +2,6 @@ package Dao.Token;
 
 import Domain.Login.ResponseLogin;
 
-public interface TokenMapper {
+public interface TokenDAOMapper {
     ResponseLogin updateToken(int userID, String username);
 }

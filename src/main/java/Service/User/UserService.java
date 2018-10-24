@@ -1,8 +1,7 @@
 package Service.User;
 
 import Dao.Entity.User;
-import Dao.Token.TokenDAO;
-import Dao.Token.TokenMapper;
+import Dao.Token.TokenDAOMapper;
 import Dao.User.UserDAO;
 import Domain.Login.ResponseLogin;
 
@@ -17,7 +16,7 @@ public class UserService implements  IUserService {
     private static String userName;
 
     @Inject
-    private TokenMapper tokenMapper;
+    private TokenDAOMapper tokenDAOMapper;
 
     private UserService(){}
 
@@ -41,7 +40,7 @@ public class UserService implements  IUserService {
         User user = new UserDAO().getUser(userName, password);
 
         if(user != null){
-            ResponseLogin responseLogin = tokenMapper.updateToken(user.getId(), user.getUsername());
+            ResponseLogin responseLogin = tokenDAOMapper.updateToken(user.getId(), user.getUsername());
             userToken = responseLogin.getToken();
             userName = responseLogin.getUser();
             userID =  user.getId();

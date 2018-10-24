@@ -2,18 +2,14 @@ package Dao.Token;
 
 import Dao.DAO;
 import Dao.Entity.User;
-import Domain.Login.RequestLogin;
 import Domain.Login.ResponseLogin;
 
-import javax.persistence.EntityNotFoundException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class TokenDAO extends DAO implements TokenMapper {
+public class TokenDAO extends DAO implements TokenDAOMapper {
 
     private Logger logger = Logger.getLogger(getClass().getName());
     private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
