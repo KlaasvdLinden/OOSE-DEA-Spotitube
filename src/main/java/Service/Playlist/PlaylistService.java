@@ -2,6 +2,7 @@ package Service.Playlist;
 
 import Domain.Playlists.Playlists;
 import IdentityMappers.PlaylistIdentityMapper;
+import IdentityMappers.UserIdentityMapper;
 import Service.User.UserService;
 
 import javax.inject.Inject;
@@ -10,14 +11,14 @@ import javax.inject.Inject;
 public class PlaylistService implements IPlaylistService {
 
     @Inject
-    UserService userService;
+    UserIdentityMapper userIdentityMapper;
 
     @Inject
     PlaylistIdentityMapper playlistIdentityMapper;
 
     @Override
     public Playlists getPlaylist(){
-        return playlistIdentityMapper.getPlaylists(userService.getUserID());
+        return playlistIdentityMapper.getPlaylists(userIdentityMapper.getCurrentUserID());
     }
 
     @Override
@@ -27,7 +28,7 @@ public class PlaylistService implements IPlaylistService {
 
     @Override
     public void addPlaylist(String name) {
-        playlistIdentityMapper.addPlaylist(userService.getUserID(), name);
+        playlistIdentityMapper.addPlaylist(userIdentityMapper.getCurrentUserID(), name);
     }
 
     @Override

@@ -33,7 +33,6 @@ public class PlaylistIdentityMapper {
             storedUserID = userID;
             updateMap(userID);
             updateNeeded = false;
-            System.out.println("Uit database");
         }
         for (Playlist playlist : playlistMap.values()) {
             playlists.getPlaylists().add(playlist);
