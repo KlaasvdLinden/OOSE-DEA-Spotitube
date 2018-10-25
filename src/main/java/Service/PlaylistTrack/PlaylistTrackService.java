@@ -10,24 +10,21 @@ import javax.inject.Inject;
 public class PlaylistTrackService implements IPlaylistTrackService {
 
     @Inject
-    PlaylistTrackDAOMapper playlistTrackDAOMapper;
-
-    @Inject
     TrackIdentityMapper trackIdentityMapper;
 
     @Override
-    public TracksResponse getTracks(int id){
+    public TracksResponse getTracks(int id) {
         return trackIdentityMapper.getTracksForPlaylist(id);
     }
 
     @Override
     public void addTrack(int playlistID, int trackID, boolean offlineAvailable) {
-        playlistTrackDAOMapper.addTrack(playlistID, trackID, offlineAvailable);
+        trackIdentityMapper.addTrack(playlistID, trackID, offlineAvailable);
     }
 
     @Override
     public void deleteTrack(int playlistID, int trackID) {
-        playlistTrackDAOMapper.deleteTrack(playlistID, trackID);
+        trackIdentityMapper.deleteTrack(playlistID, trackID);
     }
 
 

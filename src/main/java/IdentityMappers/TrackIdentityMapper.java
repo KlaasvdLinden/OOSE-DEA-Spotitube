@@ -6,9 +6,11 @@ import Domain.Track.Track;
 import Domain.Track.TracksResponse;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+@Singleton
 public class TrackIdentityMapper {
 
     @Inject
@@ -31,7 +33,7 @@ public class TrackIdentityMapper {
         return this.instance;
     }
 
-    public TracksResponse getAll(int playlistID) {
+    public TracksResponse getAllNotInPlaylist(int playlistID) {
         TracksResponse tracksResponse;
         if (playlistID != currentPlaylistIDAvailableTracks) {
             currentPlaylistIDAvailableTracks = playlistID;
@@ -53,7 +55,7 @@ public class TrackIdentityMapper {
     public TracksResponse getTracksForPlaylist(int playlistId) {
         TracksResponse tracksResponse;
         if (playlistId != currentPlaylistID || updateNeeded) {
-            System.out.println("uit database tracks for playlist");
+            System.out.println("uit database tracks for playlist" +  updateNeeded);
             updateNeeded = false;
             currentPlaylistID = playlistId;
             tracksResponse = new TracksResponse(playlistTrackDAOMapper.findAll(playlistId));
@@ -69,6 +71,20 @@ public class TrackIdentityMapper {
         }
         tracksResponse = new TracksResponse(tracks);
         return tracksResponse;
+    }
+
+    public void addTrack(int playlistID, int trackID, boolean offlineAvailable){
+        playlistTrackDAOMapper.addTrack(playlistID, trackID, offlineAvailable);
+        tracksAvailableToAddToPlaylist.remove(trackID);
+        updateNeeded = true;
+    }
+
+    public void deleteTrack(int playlistID, int trackID){
+        playlistTrackDAOMapper.deleteTrack(playlistID ,trackID);
+        Track track = playlistTracks.get(trackID);
+        playlistTracks.remove(trackID);
+        tracksAvailableToAddToPlaylist.put(track.getId(), track);
+        updateNeeded = false;
     }
 
 }

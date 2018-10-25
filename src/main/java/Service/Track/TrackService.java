@@ -14,7 +14,7 @@ public class TrackService implements  ITrackService {
 
     @Override
     public TracksResponse getAll(int playlistID) {
-        return trackIdentityMapper.getAll(playlistID);
+        return trackIdentityMapper.getAllNotInPlaylist(playlistID);
     }
 
 }
