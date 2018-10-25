@@ -6,7 +6,7 @@ import Domain.Playlists.Playlists;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 @Singleton
 public class PlaylistIdentityMapper {
@@ -15,7 +15,7 @@ public class PlaylistIdentityMapper {
     PlaylistDAOMapper playlistDAOMapper;
 
     private static PlaylistIdentityMapper instance = new PlaylistIdentityMapper();
-    private static HashMap<Integer, Playlist> playlistMap = new HashMap<>();
+    private static LinkedHashMap<Integer, Playlist> playlistMap = new LinkedHashMap <>();
     private static int storedUserID;
 
     private boolean updateNeeded = true;

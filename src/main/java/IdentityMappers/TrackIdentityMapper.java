@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 @Singleton
 public class TrackIdentityMapper {
@@ -21,7 +22,7 @@ public class TrackIdentityMapper {
 
     private static TrackIdentityMapper instance = new TrackIdentityMapper();
     private static HashMap<Integer, Track> tracksAvailableToAddToPlaylist = new HashMap<>();
-    private static HashMap<Integer, Track> playlistTracks = new HashMap<>();
+    private static LinkedHashMap<Integer, Track> playlistTracks = new LinkedHashMap<>();
     private static int currentPlaylistID;
     private static int currentPlaylistIDAvailableTracks;
     private boolean updateNeeded = true;
@@ -37,17 +38,12 @@ public class TrackIdentityMapper {
         TracksResponse tracksResponse;
         if (playlistID != currentPlaylistIDAvailableTracks) {
             currentPlaylistIDAvailableTracks = playlistID;
-            tracksResponse = new TracksResponse(trackDAOMapper.getAll(playlistID));
             tracksAvailableToAddToPlaylist.clear();
-            for (Track track : tracksResponse.getTracks()) {
+            for (Track track : trackDAOMapper.getAll(playlistID)) {
                 tracksAvailableToAddToPlaylist.put(track.getId(), track);
             }
-            return tracksResponse;
         }
-        ArrayList<Track> tracks = new ArrayList<>();
-        for (Track track : tracksAvailableToAddToPlaylist.values()) {
-            tracks.add(track);
-        }
+        ArrayList<Track> tracks = new ArrayList<>(tracksAvailableToAddToPlaylist.values());
         tracksResponse = new TracksResponse(tracks);
         return tracksResponse;
     }
@@ -55,20 +51,14 @@ public class TrackIdentityMapper {
     public TracksResponse getTracksForPlaylist(int playlistId) {
         TracksResponse tracksResponse;
         if (playlistId != currentPlaylistID || updateNeeded) {
-            System.out.println("uit database tracks for playlist" +  updateNeeded);
             updateNeeded = false;
             currentPlaylistID = playlistId;
-            tracksResponse = new TracksResponse(playlistTrackDAOMapper.findAll(playlistId));
             playlistTracks.clear();
-            for (Track track : tracksResponse.getTracks()) {
+            for (Track track : playlistTrackDAOMapper.findAll(playlistId)) {
                 playlistTracks.put(track.getId(), track);
             }
-            return tracksResponse;
         }
-        ArrayList<Track> tracks = new ArrayList<>();
-        for (Track track : playlistTracks.values()) {
-            tracks.add(track);
-        }
+        ArrayList<Track> tracks = new ArrayList<>(playlistTracks.values());
         tracksResponse = new TracksResponse(tracks);
         return tracksResponse;
     }
