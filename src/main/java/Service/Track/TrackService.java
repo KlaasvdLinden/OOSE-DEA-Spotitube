@@ -2,6 +2,7 @@ package Service.Track;
 
 import Dao.Track.TrackDAOMapper;
 import Domain.Track.TracksResponse;
+import IdentityMappers.TrackIdentityMapper;
 
 import javax.inject.Inject;
 
@@ -9,11 +10,11 @@ import javax.inject.Inject;
 public class TrackService implements  ITrackService {
 
     @Inject
-    TrackDAOMapper trackDAOMapper;
+    TrackIdentityMapper trackIdentityMapper;
 
     @Override
     public TracksResponse getAll(int playlistID) {
-        return new TracksResponse(trackDAOMapper.getAll(playlistID));
+        return trackIdentityMapper.getAll(playlistID);
     }
 
 }

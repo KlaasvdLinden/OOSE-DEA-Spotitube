@@ -2,6 +2,7 @@ package Service.PlaylistTrack;
 
 import Dao.PlaylistTrack.PlaylistTrackDAOMapper;
 import Domain.Track.TracksResponse;
+import IdentityMappers.TrackIdentityMapper;
 
 import javax.inject.Inject;
 
@@ -11,9 +12,12 @@ public class PlaylistTrackService implements IPlaylistTrackService {
     @Inject
     PlaylistTrackDAOMapper playlistTrackDAOMapper;
 
+    @Inject
+    TrackIdentityMapper trackIdentityMapper;
+
     @Override
     public TracksResponse getTracks(int id){
-        return new TracksResponse(playlistTrackDAOMapper.findAll(id));
+        return trackIdentityMapper.getTracksForPlaylist(id);
     }
 
     @Override
