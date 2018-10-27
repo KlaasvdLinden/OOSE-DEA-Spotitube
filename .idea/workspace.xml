@@ -7,124 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c068539-91c0-45d8-a977-538571a02383" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/spotitube/test/Service/PlaylistServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deployment Diagram.asta" beforeDir="false" afterPath="$PROJECT_DIR$/Deployment Diagram.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LoginController/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Controllers/LoginController/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/PlaylistController/PlaylistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Controllers/PlaylistController/PlaylistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/PlaylistTrackController/PlaylistTrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Controllers/PlaylistTrackController/PlaylistTrackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/TrackController/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Controllers/TrackController/TrackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/Entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Playlist/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/Playlist/PlaylistDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Playlist/PlaylistDAOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/Playlist/PlaylistDAOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/PlaylistTrack/PlaylistTrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/PlaylistTrack/PlaylistTrackDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/PlaylistTrack/PlaylistTrackDAOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/PlaylistTrack/PlaylistTrackDAOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/TestData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Token/TokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/Token/TokenDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Token/TokenDAOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/Token/TokenDAOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Track/TrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/Track/TrackDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Track/TrackDAOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/Track/TrackDAOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/User/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/User/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/User/UserDAOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/User/UserDAOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/util/DatabaseProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/util/DatabaseProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Domain/Login/RequestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Domain/Login/RequestLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Domain/Login/ResponseLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Domain/Login/ResponseLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Domain/Playlist/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Domain/Playlist/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Domain/Playlists/Playlists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Domain/Playlists/Playlists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Domain/Track/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Domain/Track/Track.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Domain/Track/TracksResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Domain/Track/TracksResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/AccesNotAllowedException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IdentityMappers/PlaylistIdentityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/IdentityMappers/PlaylistIdentityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IdentityMappers/TrackIdentityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/IdentityMappers/TrackIdentityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IdentityMappers/UserIdentityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/IdentityMappers/UserIdentityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/Playlist/IPlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Service/Playlist/IPlaylistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/Playlist/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Service/Playlist/PlaylistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/PlaylistTrack/IPlaylistTrackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Service/PlaylistTrack/IPlaylistTrackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/PlaylistTrack/PlaylistTrackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Service/PlaylistTrack/PlaylistTrackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/Track/ITrackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Service/Track/ITrackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/Track/TrackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Service/Track/TrackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/User/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Service/User/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/User/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Service/User/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/test/LoginControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/test/Controllers/LoginControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/test/PlaylistControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/test/Controllers/PlaylistControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/EAI.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Controllers/LoginController/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Controllers/PlaylistController/PlaylistController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Controllers/PlaylistTrackController/PlaylistTrackController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Controllers/TrackController/TrackController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/DAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Playlist/PlaylistDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Playlist/PlaylistDAOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/PlaylistTrack/PlaylistTrackDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/PlaylistTrack/PlaylistTrackDAOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/TestData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Token/TokenDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Token/TokenDAOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Track/TrackDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/Track/TrackDAOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/User/UserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/User/UserDAOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Dao/util/DatabaseProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Domain/Login/RequestLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Domain/Login/ResponseLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Domain/Playlist/Playlist.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Domain/Playlists/Playlists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Domain/Track/Track.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Domain/Track/TracksResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Exceptions/AccesNotAllowedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/IdentityMappers/PlaylistIdentityMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/IdentityMappers/TrackIdentityMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/IdentityMappers/UserIdentityMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Service/Playlist/IPlaylistService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Service/Playlist/PlaylistService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Service/PlaylistTrack/IPlaylistTrackService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Service/PlaylistTrack/PlaylistTrackService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Service/Track/ITrackService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Service/Track/TrackService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Service/User/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/Service/User/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LoginController/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/PlaylistController/PlaylistController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/PlaylistTrackController/PlaylistTrackController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/TrackController/TrackController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/DAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/Entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/Playlist/PlaylistDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/Playlist/PlaylistDAOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/PlaylistTrack/PlaylistTrackDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/PlaylistTrack/PlaylistTrackDAOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/TestData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/Token/TokenDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/Token/TokenDAOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/Track/TrackDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/Track/TrackDAOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/User/UserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/User/UserDAOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dao/util/DatabaseProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Domain/Login/RequestLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Domain/Login/ResponseLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Domain/Playlist/Playlist.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Domain/Playlists/Playlists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Domain/Track/Track.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Domain/Track/TracksResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exceptions/AccesNotAllowedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IdentityMappers/PlaylistIdentityMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IdentityMappers/TrackIdentityMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IdentityMappers/UserIdentityMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/Playlist/IPlaylistService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/Playlist/PlaylistService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/PlaylistTrack/IPlaylistTrackService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/PlaylistTrack/PlaylistTrackService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/Track/ITrackService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/Track/TrackService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/User/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/User/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/spotitube/test/LoginControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/spotitube/test/PlaylistControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package diagram.asta" beforeDir="false" afterPath="$PROJECT_DIR$/package diagram.asta" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -218,14 +101,14 @@
           <entry key="JAVA/Controllers" value="1" />
           <entry key="JavaScript-modules-diagram/C:/Users/klaas/Documents/School/OOSE/OOSE-DEA/OOSE-DEA-Spotitube/src/main" value="1" />
           <entry key="LoginController" value="1" />
-          <entry key="java" value="345" />
+          <entry key="java" value="351" />
           <entry key="properties" value="3" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="345" />
+          <entry key="JAVA" value="351" />
           <entry key="Properties" value="3" />
           <entry key="UML" value="4" />
           <entry key="XML" value="6" />
@@ -425,6 +308,25 @@
               <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="klaasvanderlinden" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="klaasvanderlinden" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -455,7 +357,7 @@
     <property name="SearchEverywhereHistoryKey" value="userDAO&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540628733659" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540630926342" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -691,7 +593,7 @@
       <workItem from="1540476031043" duration="626000" />
       <workItem from="1540482369732" duration="4867000" />
       <workItem from="1540559908195" duration="2123000" />
-      <workItem from="1540624051280" duration="4933000" />
+      <workItem from="1540624051280" duration="6694000" />
     </task>
     <servers />
   </component>
@@ -728,7 +630,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151054000" />
+    <option name="totallyTimeSpent" value="152815000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -742,7 +644,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.42214766" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3590604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -956,27 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/Entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/Token/TokenDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/User/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1203,6 +1084,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
           <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/Entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/User/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/spotitube/klaasvanderlinden/Dao/Token/TokenDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
