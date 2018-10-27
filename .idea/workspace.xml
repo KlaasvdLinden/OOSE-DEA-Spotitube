@@ -7,8 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c068539-91c0-45d8-a977-538571a02383" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package diagram.asta" beforeDir="false" afterPath="$PROJECT_DIR$/package diagram.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/todo.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Deployment Diagram.asta" beforeDir="false" afterPath="$PROJECT_DIR$/Deployment Diagram.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Opleverdocumentatie Spotitube Klaas van der Linden 599644.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Opleverdocumentatie Spotitube Klaas van der Linden 599644.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EAI/WEB-INF/classes/oose/dea/spotitube/klaasvanderlinden/Dao/TestData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/oose/dea/spotitube/klaasvanderlinden/Dao/TestData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$leverdocumentatie Spotitube Klaas van der Linden 599644.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/~WRL2534.tmp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -75,7 +79,7 @@
     <session id="-560421052">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="36" />
+          <entry key="project.closed" value="37" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="2" />
@@ -297,23 +301,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="klaasvanderlinden" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOSE-DEA-Spotitube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOSE-DEA-Spotitube" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="klaasvanderlinden" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -327,7 +314,7 @@
     <property name="SearchEverywhereHistoryKey" value="userDAO&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540646195456" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540652695093" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -357,7 +344,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistServiceTest">
+  <component name="RunManager" selected="TomEE Server.Run Application TomEE">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="EAI" />
@@ -563,7 +550,7 @@
       <workItem from="1540476031043" duration="626000" />
       <workItem from="1540482369732" duration="4867000" />
       <workItem from="1540559908195" duration="2123000" />
-      <workItem from="1540624051280" duration="10931000" />
+      <workItem from="1540624051280" duration="11854000" />
     </task>
     <servers />
   </component>
@@ -600,7 +587,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157052000" />
+    <option name="totallyTimeSpent" value="157975000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -624,7 +611,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
